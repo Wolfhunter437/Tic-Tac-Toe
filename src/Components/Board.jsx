@@ -1,10 +1,12 @@
 import Square from './Square'
 
-export default function Board({ squares, handleSquareClick }) {
+export default function Board({ squares, handleSquareClick, winningSquares }) {
 
   const renderSquare = position => {
+    const isWinningSquare = winningSquares.includes(position)
+    
     return (
-      <Square value={squares[position]} onClick={() => handleSquareClick(position)} />
+      <Square value={squares[position]} onClick={() => handleSquareClick(position)} isWinningSquare={isWinningSquare} />
     )
   }
   return (

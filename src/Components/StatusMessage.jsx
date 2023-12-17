@@ -2,7 +2,7 @@ export default function StatusMessage({winner, gamingBoard}) {
 
     const {squares, isXNext} = gamingBoard; 
     const noMovesLeft = squares.every(squareValue => squareValue !== null);
-    const nextPlayer = isXNext ? <span style={{color: 'red'}}>X</span> : <span style={{color: 'white'}}>O</span>;
+    const nextPlayer = isXNext ? <span className="text-green">X</span> : <span className="text-orange">O</span>;
 
     const renderStatusMessage = () => {
         if(winner){
