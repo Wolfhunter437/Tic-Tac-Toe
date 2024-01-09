@@ -1,6 +1,6 @@
-$green: #12e177;
-$orange: #ffc72a;
-$blue: #4c43d4;
+$green: violet;
+$orange: magenta;
+$blue: black;
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -90,6 +90,27 @@ button {
     background-color: $orange;
     box-shadow: none;
   }
+}
+
+.btn-reset.active:hover{
+  cursor: pointer;
+  background: $green;
+  color: $blue;
+  transition: 0.4s ease-out;
+}
+
+.btn-reset.active:not(hover){
+  transition: 0.3s ease-out;
+}
+
+.btn-reset:hover{
+  cursor: pointer;
+  background: $orange;
+  transition: 0.4s ease-out;
+}
+
+.btn-reset:not(hover){
+  transition: 0.3s ease-out;
 }
 
 .board {
